@@ -8,6 +8,7 @@ x<-hh_power$Date=="1/2/2007" | hh_power$Date=="2/2/2007"
 hhpwc<-hh_power[x,]
 rm(hh_power)
 rm(x)
+hhpwc$dt<-as.POSIXct(paste(as.character(hhpwc$Date),as.character(hhpwc$Time)), format = "%d/%m/%Y %H:%M") 
 
 # Plot 4
 #================
